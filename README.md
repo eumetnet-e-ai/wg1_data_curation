@@ -19,7 +19,7 @@ Participation is possible via
 
 If you are interested to
 1. contribute to the first deliverables
-2. future work
+2. contribute to the future work
 3. Join interest group
 please provide your information at the [web form](https://terminplaner6.dfn.de/en/p/753c865520370db6acb9aa4a80a43bfe-911670)
 
