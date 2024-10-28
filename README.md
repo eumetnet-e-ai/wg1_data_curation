@@ -3,19 +3,16 @@
 Material for Data Curation
 
 -------
-[Live minutes of the Kick-off meeting](https://docs.google.com/document/d/1jYyMo1h8u_xzHiIZBCH5z-mTcQLVabQ62-bLRPGyLnE/edit)
+[Minutes of the kick-off meeting](minutes/2024-10-14_WG_Data_Curation_Kick-off.md)
 
 [Discussion platform (select channel #e-ai_wg1_data_curation)](https://chat.europeanweather.cloud)
 
 [Form to provide email for who are interested to contribute](https://terminplaner6.dfn.de/en/p/753c865520370db6acb9aa4a80a43bfe-911670) (or via email to roope.tervo@eumetsat.int; stephan.siemen@ecmwf.int;arianna.valmassoi@dwd.de)
 
-[Doodle for Gap analysis working meeting 1](https://doodle.com/meeting/participate/id/e53kzvAb)
-
-
-[Doodle for Gap analysis working meeting 2](https://doodle.com/meeting/participate/id/dPrkVyAa)
-
-
-[Doodle for Gap analysis working meeting 3](https://doodle.com/meeting/participate/id/en800XYb)
+Next working meetings: 
+1. Thursday 7 November 2024 at 13:00 - 14:30 CET
+2. Friday 22 November 2024 at 09:30 - 11:00 CET
+3. Thursday 5 December 2024 at 10:00 - 11:30 CET
 
 ---
 
