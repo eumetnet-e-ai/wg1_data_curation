@@ -10,6 +10,7 @@ Material for Data Curation
 [Form to provide email for who are interested to contribute](https://terminplaner6.dfn.de/en/p/753c865520370db6acb9aa4a80a43bfe-911670) (or via email to roope.tervo@eumetsat.int; stephan.siemen@ecmwf.int;arianna.valmassoi@dwd.de)
 
 Next working meetings: 
+
 2. Friday 22 November 2024 at 09:30 - 11:00 CET
 3. Thursday 5 December 2024 at 10:00 - 11:30 CET
 
