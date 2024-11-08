@@ -7,6 +7,9 @@ Contributors are asked to copy the template and add their use case to the docume
 
 Very short description + [url](README.md)
 
+### Contact
+Contact point (via preferred channel), optional
+
 ### Used training data
 
 Please copy the underlying table for each used dataset and fulfil from applicable parts. Don't worry! It does not need to be complete! 

@@ -1,8 +1,11 @@
 
 
-## Use case template
+## Detecting tropical storms using transfer learning
 
 Detecting tropcial storms using transfer learning from Himawari infrared channel. See [article](https://ieeexplore.ieee.org/document/10436346) for more details.
+
+### Contact
+Roope Tervo
 
 ### Used training data
 
