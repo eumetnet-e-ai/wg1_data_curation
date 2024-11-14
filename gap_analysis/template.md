@@ -27,7 +27,7 @@ Please note that also non-publicly available datasets are in scope as well.
 | **Preferred data access mechanism** | Preferred access mechanism if any |
 | **Data preprocessing** | Short description of preprocessing and used tools|
 | **Reason for usage** | Short description why this data were used |
-| **Challeneges** | If you have occured some challenges in using the data, please describe them here |
+| **Challenges** | If you have occured some challenges in using the data, please describe them here |
 
 ### Missing data
 
@@ -57,5 +57,5 @@ Please copy the underlying table for each used dataset and fulfil from applicabl
 | **Preferred data access mechanism** | Preferred access mechanism if any |
 | **Data preprocessing** | Short description of preprocessing |
 | **Reason for usage** | Short description why this data were used |
-| **Challeneges** | If you have occured some challenges in using the data, please describe them here |
+| **Challenges** | If you have occured some challenges in using the data, please describe them here |
 
