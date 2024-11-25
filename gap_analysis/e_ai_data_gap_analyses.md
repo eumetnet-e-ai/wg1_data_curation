@@ -23,24 +23,34 @@
 - Writing of this report
 
 
-## 3. Data Requirements
+## 3. Data Requirements of Identified Use Cases
 This chapter handles key requirements for data based on the use case analyses.
 
 ### 3.1 Key Use Cases
-- List of use cases identified / analysed in this work (per category perhaps?)
+- List of use cases identified / analysed in this work 
+- Applications summary (table below), possibly to be divided per category in the future:
+  - Meteorological data (e.g., temperature, humidity, pressure).
+  - Climate data (e.g., long-term trends, sea-level changes).
+  - Environmental data (e.g., land cover, aerosols).
+  - Socioeconomic data (for impact and adaptation modeling).
 
-### 3.2 Data Categories
-- Meteorological data (e.g., temperature, humidity, pressure).
-- Climate data (e.g., long-term trends, sea-level changes).
-- Environmental data (e.g., land cover, aerosols).
-- Socioeconomic data (for impact and adaptation modeling).
 
-### 3.3 Data Characteristics
-- Spatial resolution.
-- Temporal resolution.
-- Accuracy and reliability.
-- Coverage (global, regional, local).
+  | Name | Link | Temporal Resolution | Domain | Geospatial Resolution | Used Data | Data Format | Key Challenges |
+  |------|------|---------------------|-------------|----------|------------|-------------|----------------|
+  | CloudCast | [Description](../gap_analysis/use_cases/cloudcast.md) | 15 minutes | Northern Europe | 4x4 km | Effective cloudiness, ie. cloud fraction | Zarr | Poor quality and missing data  |
+  | Icing forecast | [Description](use_cases/icing.md) | 1h | - |  2.5x2.5km | NWP/MEPS | Grib2  | - |
+  | Earthformer | [Description](use_cases/multi_source_to_precipitation.md) | 5 min | Austria | 1x1km/2x2km | radar / SEVIRI / lightning / analyses | H5/tif | slow download |
+  | Tropical storm detection | [Description](use_cases/tropical_storm_detection.md) | 30 minutes | Global | 5km | Infrared satellite images | GeoTiff | 1) Handling native format is challenging. 2) License restrictions for usage |
 
+### 3.3 Joined Characteristics
+- Preferred access mechanism: S3
+- Preferred data format: controversial
+- Spatial resolution: as high as possible
+- Temporal resolution: ?
+- Coverage (global, regional, local): mostly limited areas
+
+### 3.4 Summary of obstacles
+- If we have enough content, we can add summary table of problems 
 
 ## 4. Current Data Inventory
 
@@ -50,6 +60,8 @@ Repeat following for:
 - Ground-based observations
 - Satellite data
 - Impact data
+
+NOTE: add also key future datasets such as ERA6 and EPS-SG
 
 ### 4.1 Reanalyses
 
@@ -64,9 +76,6 @@ Repeat following for:
     - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
 - **Obstacles in Usage**:
   -  Whatever comes up in the use case analyses
-
-### 4.x. Summary of obstacles
-- If we have enough content, we can add summary table of problems 
 
 ## 5. Identification of Data Gaps
 
@@ -95,6 +104,7 @@ List missing data or significant content-related shortcomings for existing data.
 - Add:
     - Usage examples
     - Tools to handle and convert data to AI-ready form
+    - Future directions: do/donts feedback from the ML applications to the different data providers (best practices)
     - Quality analyses ?
     - what else?
 
