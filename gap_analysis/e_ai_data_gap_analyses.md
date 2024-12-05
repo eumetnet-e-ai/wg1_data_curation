@@ -39,25 +39,31 @@ This chapter handles key requirements for data based on the use case analyses.
   |------|------|---------------------|-------------|----------|------------|-------------|----------------|
   | CloudCast | [Description](../gap_analysis/use_cases/cloudcast.md) | 15 minutes | Northern Europe | 4x4 km | Effective cloudiness, ie. cloud fraction | Zarr | Poor quality and missing data  |
   | Icing forecast | [Description](use_cases/icing.md) | 1h | - |  2.5x2.5km | NWP/MEPS | Grib2  | - |
-  | Earthformer | [Description](use_cases/multi_source_to_precipitation.md) | 5 min | Austria | 1x1km/2x2km | radar / SEVIRI / lightning / analyses | H5/tif | slow download |
+  | Earthformer | [Description](use_cases/multi_source_to_precipitation.md) | 5 min | Austria | 1x1km/2x2km | radar / SEVIRI / lightning / analyses | H5 --> tif | slow download |
   | Tropical storm detection | [Description](use_cases/tropical_storm_detection.md) | 30 minutes | Global | 5km | Infrared satellite images | GeoTiff | 1) Handling native format is challenging. 2) License restrictions for usage |
+  | Weather front forecasts | [Description](use_cases/weather_front_analysis.md) | 3 hours | Europe / Global |  ~ 0.4° | ICON | Grib --> NetCDF |  - |
 
 ### 3.3 Joined Characteristics
-- Preferred access mechanism: S3
-- Preferred data format: controversial
-- Spatial resolution: as high as possible
-- Temporal resolution: ?
-- Coverage (global, regional, local): mostly limited areas
+
+There are no enough use cases to draw trustwrothy synthesis, but preliminary folllowing things can be stated: 
+
+- Preferred access mechanism is S3
+- Preferred data format is controversial
+- Spatial resolution should be as high as possible but it naturally depends on use cases. Currently available data for ML/AI training is sufficient for localised use cases such as nowcasting.
 
 ### 3.4 Summary of obstacles
-- If we have enough content, we can add summary table of problems 
+
+There are no enough use cases to draw trustwrothy synthesis. 
 
 ## 4. Current Data Inventory
+
+This chapter list most typically used data sources for E-AI applications with necessary details to identify potential challenges with existing data or missing data. Readers are invited to add their data source to the tables.
+
+Also MLCast and MLLAM working group documents list typically used datasets. 
 
 Repeat following for:
 - Reanalysis 
 - NWP data
-- Ground-based observations
 - Satellite data
 - Impact data
 
@@ -65,17 +71,33 @@ NOTE: add also key future datasets such as ERA6 and EPS-SG
 
 ### 4.1 Reanalyses
 
-1-2 sentence definition of data
+To be written
 
-- **Available data sources**
-    - List / table of available data sourcees with a link
-- **Data services**
-    - How available (data API / S3 / ftp / not available / etc.)
-    - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
-- **License**:
-    - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
-- **Obstacles in Usage**:
-  -  Whatever comes up in the use case analyses
+
+### 4.1 Weather and marine observations from single locations
+
+Weather and marine bservations from single locations include synop stations, automatic weather stations (AWS), soundings, AMDARs, buouys, other type of observations providing data from single location or trajectory.
+
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|------------|
+| Synop & AWS    | EUMETNET Obsevation hub: [Description](https://observations.eumetnet.eu/) (json, last 24 hours) |    RODEO climatogloical data API     |     CC4BY    |    -     | json | 24h | Doesn't include all stations, bufr      |
+|               | WIS2 global cache: [Description](https://registry.opendata.aws/wis2-global-cache/) (bufr/grib/netcdf, last 24 hours)  |    RODEO climatogloical data API     |     CC4BY    |    -     | bufr | 24h | Doesn't include all stations, bufr      |
+| Sounding  |                 |         |         |            | - | - |           |
+| AMDAR     |                 |         |         |            | - | - |           |
+| Buoy      |                 |         |         |            | - | - |           |
+| Ship      |                 |         |         |            | - | - |           |
+| METAR     | [Aviation weather center API](https://aviationweather.gov/data/api/) | - | - | - | - | - | - |
+| AIRMET       | [Aviation weather center API](https://aviationweather.gov/data/api/) | - | - | - | - | - | - |
+| SIGMET       | [Aviation weather center API](https://aviationweather.gov/data/api/) | - | - | - | - | - | - |
+
+
+### 4.1 Satellite data
+
+xxx
+
+| Data Type | Realtime Service | Archive | License | Challenges |
+|-----------|-----------------|---------|---------|-----------|
+
 
 ## 5. Identification of Data Gaps
 
