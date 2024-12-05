@@ -64,7 +64,8 @@ Repeat following for:
 NOTE: add also key future datasets such as ERA6 and EPS-SG
 
 ### 4.1 Reanalyses
-
+Reanalyses are a key dataset for early ML, since they provide a gridded physically consistent dataset that has no spatial (neither in the vertical nor in the horizontal) or temporal gap.
+#### 4.1.1. ERA5 
 1-2 sentence definition of data
 
 - **Available data sources**
@@ -72,6 +73,20 @@ NOTE: add also key future datasets such as ERA6 and EPS-SG
 - **Data services**
     - How available (data API / S3 / ftp / not available / etc.)
     - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
+- **License**:
+    - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
+- **Obstacles in Usage**:
+  -  Whatever comes up in the use case analyses
+
+#### 4.1.x. ICON-DREAM - "future"
+ICON-DREAM (ICON-Dual resolution Reanalysis for Emulators, Applications and Monitoring) utilize the global ICON NWP framework from DWD, that has an additional two-way coupled nest over Europe. This  reanalysis has resolution of 13km globally and 6.5 km over Europe and 120 vertical levels. Its operational data assimilation cycle comprises an EnVar at 3-hourly intervals complemented by a snow analysis every 3 hours, and T2M, SST and soil moisture analysis every 24 hours (at 00 UTC). The background error covariances are provided by a 20 member ensemble at 40km global and 20km over Europe with a LETKF-based data assimilation scheme.
+The reanalysis currently covers the period from 2010 to today with a continuous extension to the current time. Plans include the back-extension starting in 1979.
+
+- **Available data sources**
+    - 111 hourly variables for the deterministic and all ensembles, including their European nests. Data sharing procedure: work in progress given the high volume (0.4 PB/year).
+- **Data services**
+    - How available: some variables will be on a publicly accessible ftp server.
+    - Restrictions in availability: for now, only on HPC.
 - **License**:
     - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
 - **Obstacles in Usage**:
