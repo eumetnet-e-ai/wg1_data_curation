@@ -73,12 +73,36 @@ This chapter list most typically used data sources for E-AI applications with ne
 Also [MLCast](https://docs.google.com/document/d/1iknFj36XdV19udaIsYJhVJLv2Hq-ARjO85jD0jfrYqw/edit?usp=sharing) and [ML LAM](https://docs.google.com/document/d/1KzMHjl08ESMSpEwJ1eopbWfBp_2MXL-XL63KljWQCZU/edit?usp=sharing) working group documents list typically used datasets. 
 
 ### 4.1 Reanalyses
+<<<<<<< HEAD
 
 To be written
+=======
+Reanalyses are a key dataset for early ML, since they provide a gridded physically consistent dataset that has no spatial (neither in the vertical nor in the horizontal) or temporal gap.
+#### 4.1.1. ERA5 
+1-2 sentence definition of data
+>>>>>>> 16b1c88 (Update e_ai_data_gap_analyses.md)
 
 
+<<<<<<< HEAD
 ### Weather radar data
 Weather radar data are available at least from following sources:
+=======
+#### 4.1.x. ICON-DREAM - "future"
+ICON-DREAM (ICON-Dual resolution Reanalysis for Emulators, Applications and Monitoring) utilize the global ICON NWP framework from DWD, that has an additional two-way coupled nest over Europe. This  reanalysis has resolution of 13km globally and 6.5 km over Europe and 120 vertical levels. Its operational data assimilation cycle comprises an EnVar at 3-hourly intervals complemented by a snow analysis every 3 hours, and T2M, SST and soil moisture analysis every 24 hours (at 00 UTC). The background error covariances are provided by a 20 member ensemble at 40km global and 20km over Europe with a LETKF-based data assimilation scheme.
+The reanalysis currently covers the period from 2010 to today with a continuous extension to the current time. Plans include the back-extension starting in 1979.
+
+- **Available data sources**
+    - 111 hourly variables for the deterministic and all ensembles, including their European nests. Data sharing procedure: work in progress given the high volume (0.4 PB/year).
+- **Data services**
+    - How available: some variables will be on a publicly accessible ftp server.
+    - Restrictions in availability: for now, only on HPC.
+- **License**:
+    - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
+- **Obstacles in Usage**:
+  -  Whatever comes up in the use case analyses
+
+## 5. Identification of Data Gaps
+>>>>>>> 16b1c88 (Update e_ai_data_gap_analyses.md)
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
