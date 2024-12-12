@@ -78,7 +78,73 @@ NOTE: add also key future datasets such as ERA6 and EPS-SG
 
 ### 4.1 Reanalyses
 
-To be written
+Reanalyses are a key dataset for early ML, since they provide a gridded physically consistent dataset that has no spatial (neither in the vertical nor in the horizontal) or temporal gap.
+
+The available products can be divided between global and regional reanalyses, based on their spatial coverage.
+
+#### 4.1.1 Global Reanalyses
+The current available global reanalyses are summarized below.
+
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
+| ERA5 |  5-days delay | [C3S](link) | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 35km () |  | 1959(?) onwards | 1 hour | Low resolution |
+| JRA-55 |  ? | [JRA](link) |  | 120km |  | 1978 onwards | ? hour | Low resolution |
+| JRA-3Q |  ? | [JRA](link) |  | 55km (?) |  | 1959(?) onwards | ? hour | Low resolution |
+| MERRA-2 |  ? | [JRA](link) |  | ~50km  |  | 1980 onwards | ? hour | Low resolution |
+| ICON-DREAM |  ? | [DWD?](link) |  | 13km  |  | 2010 onwards | 1 hour | ? |
+
+ICON-DREAM is included in the available reanalyses even if the data sharing and paper publication is still ongoing.
+
+The planned global reanalyses are summarized below.
+
+| Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|------------|--------|------------|-----------|------------|
+| ERA6 |   Q2 2026 | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 14km () |  | 1959(?) onwards | 1 hour | ? |
+| MERRA-21C |  not decided | - | ~50km  | - | - | - | - |
+| ICON-DREAM |  2026 | - | 13km  |  | 1980 onwards | 1 hour | ? |
+
+While the planned ERA6 and MERRA-21C include an update of the whole system, the ICON-DREAM is only a back-extension and no major updates are planned.
+MERRA-21C has no planned start, as the system is currently being tested, including the possibility of adding an ensemble to it.
+
+A major challenge for the current global reanalyses is the impossibility to assess uncertainty as only ERA5 provides an ensemble, prior to ICON-DREAM.
+Furthermore, the ERA5 ensemble is only meant to sample the observations uncertainties, as it perturbs the observational error.
+
+ICON-DREAM provides a 20-ensemble members (ERA5/ERA6 10), which includes physical perturbations and parameter perturbations. However, the challenge lies in sharing this data volume.
+
+#### 4.1.2 European Regional Reanalyses
+
+One of the main limitations for the regional reanalyses production is that they rely on the global reanalyses to provide the boundary conditions.
+Therefore, the current system currently used in the numerical weather forecast needs to be adapted for a reduced/lack of ensemble.
+
+
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
+| COSMO-REA6 |  no | [DWD](link) |  | 6km |  | 1995-2019 | 1 hour/15 minutes | Not extended, .. |
+| HARMONIE | no | [?](link) |  | 9km |  | 1961-2019 | 1 hour? | ? |
+| CERRA |  ? | [C3S?](link) |  | 5.5km |  | 1984 onwards | 1 hour? | ? |
+| ICON-DREAM |  ? | [DWD?](link) |  | 6.5km | grib2? | 2010 onwards | 1 hour | ? |
+
+The ICON-DREAM reanalyses is the 2-way nest over Europe of the global reanalyses previously described.
+
+The challenge with our regional reanalyses is that:
+1. very few are continued, i.e. CERRA, ICON-DREAM
+2. their uncertainty is hard to estimate, i.e. CERRA has ERA5 ensemble.
+3. ICON-DREAM is looking for a sharing strategy.
+
+One of the main scientific challenges for regional reanalyses is to provide a climate-consistent representation that is not influenced by the inclusion of observations throughout the period.
+Therefore, the Japan Meteorological Agency has suggested a framework for regional reanalyses that split what was one product into two: sparse-input and full-input.
+The sparse/full- input they refer to the observations, the first is with a very limited subset of available observation types for which there is a long record.
+The full-input refers to using as many observations as the current operational system, but limiting the period to one that includes all observation types.
+
+The planned regional reanalyses for Europe are summarized below.
+
+| Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|------------|--------|------------|-----------|------------|
+| ARRA |   Q4 2024 |  | 1.3km  |  | 1961-2020  | 1 hour? | Data sharing: ~13 PB |
+| ICON-FORCE |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
+| ICON-FORCE-C |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
+
+The main challenge that regional reanalyses are facing is the high volume of data and the lack of a common sharing platform, as at the moment each producer has to create that as well.
 
 
 ### Weather radar data
