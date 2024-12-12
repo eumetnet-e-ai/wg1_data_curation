@@ -72,37 +72,78 @@ This chapter list most typically used data sources for E-AI applications with ne
 
 Also [MLCast](https://docs.google.com/document/d/1iknFj36XdV19udaIsYJhVJLv2Hq-ARjO85jD0jfrYqw/edit?usp=sharing) and [ML LAM](https://docs.google.com/document/d/1KzMHjl08ESMSpEwJ1eopbWfBp_2MXL-XL63KljWQCZU/edit?usp=sharing) working group documents list typically used datasets. 
 
-### 4.1 Reanalyses
-<<<<<<< HEAD
+### Reanalyses
 
-To be written
-=======
 Reanalyses are a key dataset for early ML, since they provide a gridded physically consistent dataset that has no spatial (neither in the vertical nor in the horizontal) or temporal gap.
-#### 4.1.1. ERA5 
-1-2 sentence definition of data
->>>>>>> 16b1c88 (Update e_ai_data_gap_analyses.md)
+
+The available products can be divided between global and regional reanalyses, based on their spatial coverage.
+
+#### Global Reanalyses
+The current available global reanalyses are summarized below.
+
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
+| ERA5 |  5-days delay | [C3S](link) | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 35km () |  | 1959(?) onwards | 1 hour | Low resolution |
+| JRA-55 |  no (1958 - 2024) | [JRA](https://jra.kishou.go.jp/JRA-55/index_en.html) |  [Licence](https://search.diasjp.net/en/dataset/JRA55) | 55km |  | 1958-01-01 - 2024-02-02  | 3/6 hour | Discontinued |
+| JRA-3Q |  - |  [Licence](https://search.diasjp.net/en/dataset/JRA3Q) | [JRA-3Q](DOI:10.20783/DIAS.645) | 40km  | [Variables and format](https://jra.kishou.go.jp/JRA-3Q/document/JRA-3Q_LL125_format_en.pdf) | 1947-09-01 onwards | ? hour | Low resolution |
+| MERRA-2 | 15th of the next month | [Access](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/WMO_climate_reanalysis/) | [Licence](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/)   | 0.5° × 0.625°  | [Variables and format](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/) | 1980 onwards | 1/3 hour | Low resolution |
+| ICON-DREAM |  ? | ? |  CC-BY4.0 | 13km  | ? | 2010 onwards | 1 hour | ? |
+
+ICON-DREAM is included in the available reanalyses even if the data sharing and paper publication is still ongoing.
+
+The planned global reanalyses are summarized below.
+
+| Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|------------|--------|------------|-----------|------------|
+| ERA6 |   Q2 2026 | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 14km () |  | 1959(?) onwards | 1 hour | ? |
+| MERRA-21C |  2027/2028 | - | -  | - | - | - | - |
+| ICON-DREAM |  2026 | - | 13km  |  | 1980 onwards | 1 hour | ? |
+
+While the planned ERA6 and MERRA-21C include an update of the whole system, the ICON-DREAM is only a back-extension and no major updates are planned.
+MERRA-21C has no planned start, as the system is currently being tested, including the possibility of adding an ensemble to it.
+
+A major challenge for the current global reanalyses is the impossibility to assess uncertainty as only ERA5 provides an ensemble, prior to ICON-DREAM.
+Furthermore, the ERA5 ensemble is only meant to sample the observations uncertainties, as it perturbs the observational error.
+
+ICON-DREAM provides a 20-ensemble members (ERA5/ERA6 10), which includes physical perturbations and parameter perturbations. However, the challenge lies in sharing this data volume.
+
+#### European Regional Reanalyses
+
+One of the main limitations for the regional reanalyses production is that they rely on the global reanalyses to provide the boundary conditions.
+Therefore, the current system currently used in the numerical weather forecast needs to be adapted for a reduced/lack of ensemble.
 
 
-<<<<<<< HEAD
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
+| COSMO-REA6 |  no | [DWD](https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/) | [Licence](https://data.opendatascience.eu/geonetwork/srv/api/records/4d6f6090-c242-454b-9224-1151f7ae2823) | 6km | [grib2 to netcdf](https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/help_COSMO_REA6/Convert_REA6_data.pdf) | 1995-2019 | 1 hour/15 minutes | Not extended, .. |
+| HARMONIE-UERRA | no | [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-single-levels?tab=overview) | [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-single-levels?tab=overview) | 9km | grib2 | 1961-2019 | 6 hours | ? |
+| CERRA |  [Refer to here](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | [Info](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | [Info](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | 5.5km |  | 1984 onwards | 1 hour? | ? |
+| ICON-DREAM |  ? | - | CC-BY4.0 | 6.5km | grib2? | 2010 onwards | 1 hour | ? |
+
+The ICON-DREAM reanalyses is the 2-way nest over Europe of the global reanalyses previously described.
+
+The challenge with our regional reanalyses is that:
+1. very few are continued, i.e. CERRA, ICON-DREAM
+2. their uncertainty is hard to estimate, i.e. CERRA has ERA5 ensemble.
+3. ICON-DREAM is looking for a sharing strategy.
+
+One of the main scientific challenges for regional reanalyses is to provide a climate-consistent representation that is not influenced by the inclusion of observations throughout the period.
+Therefore, the Japan Meteorological Agency has suggested a framework for regional reanalyses that split what was one product into two: sparse-input and full-input.
+The sparse/full- input they refer to the observations, the first is with a very limited subset of available observation types for which there is a long record.
+The full-input refers to using as many observations as the current operational system, but limiting the period to one that includes all observation types.
+
+The planned regional reanalyses for Europe are summarized below.
+
+| Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
+|-----------|-----------------|---------|------------|--------|------------|-----------|------------|
+| ARRA |   Q4 2024 |  | 1.3km  |  | 1961-2020  | 1 hour? | Data sharing: ~13 PB |
+| ICON-FORCE |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
+| ICON-FORCE-C |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
+
+The main challenge that regional reanalyses are facing is the high volume of data and the lack of a common sharing platform, as at the moment each producer has to create that as well.
+
 ### Weather radar data
 Weather radar data are available at least from following sources:
-=======
-#### 4.1.x. ICON-DREAM - "future"
-ICON-DREAM (ICON-Dual resolution Reanalysis for Emulators, Applications and Monitoring) utilize the global ICON NWP framework from DWD, that has an additional two-way coupled nest over Europe. This  reanalysis has resolution of 13km globally and 6.5 km over Europe and 120 vertical levels. Its operational data assimilation cycle comprises an EnVar at 3-hourly intervals complemented by a snow analysis every 3 hours, and T2M, SST and soil moisture analysis every 24 hours (at 00 UTC). The background error covariances are provided by a 20 member ensemble at 40km global and 20km over Europe with a LETKF-based data assimilation scheme.
-The reanalysis currently covers the period from 2010 to today with a continuous extension to the current time. Plans include the back-extension starting in 1979.
-
-- **Available data sources**
-    - 111 hourly variables for the deterministic and all ensembles, including their European nests. Data sharing procedure: work in progress given the high volume (0.4 PB/year).
-- **Data services**
-    - How available: some variables will be on a publicly accessible ftp server.
-    - Restrictions in availability: for now, only on HPC.
-- **License**:
-    - Restrictions in availability (only in HPC / EWC / etc, only for certain users...)
-- **Obstacles in Usage**:
-  -  Whatever comes up in the use case analyses
-
-## 5. Identification of Data Gaps
->>>>>>> 16b1c88 (Update e_ai_data_gap_analyses.md)
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
@@ -215,6 +256,7 @@ Following remarkable obastacles in usage were identified:
 - Varying and inconcistent time steps and resolutions. All data is not geo-referenced
 - Climate Data Records (CDRs) are great source for training but there's no always corresponding real-time data available
 - Limited coverage of data sources / fragmented data sources
+- Missing mechanism to share large data volumes (i.e. reanalyses)
 
 ## Future avenues
 
