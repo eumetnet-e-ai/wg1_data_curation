@@ -1,14 +1,19 @@
+## Use case nowcAstIng
 
-Following is the description of use cases with data needs and sources. 
+nowcAstIng is a toolbox develloped by the NWC SAF.  
+The toolbox provide and environment where to test ML models for fog nowcsating in the airports. The idea behind is to exploit simustaneously METAR data and the NWCSAF Clouds. The software downloads from ICARE small stamps of the NWC SAF cloud products and build an individual netcdf file with a very long time coordinate. It does the same for METAR reports downloading them from the IOWA University.  
+The nowcAstIing toolbox is in the format of a Jupyter notebook collection, allowing:
+1. To download the NWC SAF clouds and collocate them with METAR reports ;
+2. To get insight on the fog formation ;
+3. To establish baseline models ;
+4. To develop ML models to forecast the occurrence of fog ;
+5. To store their models for operational reuse.
 
-Contributors are asked to copy the template and add their use case to the document. 
+https://gitlab.eumetsat.int/eumetlab/weather/nowcasting.git
 
-## Use case template
-
-Very short description + [url](README.md)
 
 ### Contact
-Contact point (via preferred channel), optional
+jllisov@aemet.es
 
 ### Used training data
 
