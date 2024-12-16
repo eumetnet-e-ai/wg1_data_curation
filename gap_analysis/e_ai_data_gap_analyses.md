@@ -88,10 +88,10 @@ The current available global reanalyses are summarized below.
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
 | ERA5 |  5-days delay | [C3S](link) | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 35km () |  | 1959(?) onwards | 1 hour | Low resolution |
-| JRA-55 |  ? | [JRA](link) |  | 120km |  | 1978 onwards | ? hour | Low resolution |
-| JRA-3Q |  ? | [JRA](link) |  | 55km (?) |  | 1959(?) onwards | ? hour | Low resolution |
-| MERRA-2 |  ? | [JRA](link) |  | ~50km  |  | 1980 onwards | ? hour | Low resolution |
-| ICON-DREAM |  ? | [DWD?](link) |  | 13km  |  | 2010 onwards | 1 hour | ? |
+| JRA-55 |  no (1958 - 2024) | [JRA](https://jra.kishou.go.jp/JRA-55/index_en.html) |  [Licence](https://search.diasjp.net/en/dataset/JRA55) | 55km |  | 1958-01-01 - 2024-02-02  | 3/6 hour | Discontinued |
+| JRA-3Q |  - |  [Licence](https://search.diasjp.net/en/dataset/JRA3Q) | [JRA-3Q](DOI:10.20783/DIAS.645) | 40km  | [Variables and format](https://jra.kishou.go.jp/JRA-3Q/document/JRA-3Q_LL125_format_en.pdf) | 1947-09-01 onwards | ? hour | Low resolution |
+| MERRA-2 | 15th of the next month | [Access](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/WMO_climate_reanalysis/) | [Licence](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/)   | 0.5° × 0.625°  | [Variables and format](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/) | 1980 onwards | 1/3 hour | Low resolution |
+| ICON-DREAM |  ? | ? |  CC-BY4.0 | 13km  | ? | 2010 onwards | 1 hour | ? |
 
 ICON-DREAM is included in the available reanalyses even if the data sharing and paper publication is still ongoing.
 
@@ -100,7 +100,7 @@ The planned global reanalyses are summarized below.
 | Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|------------|--------|------------|-----------|------------|
 | ERA6 |   Q2 2026 | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 14km () |  | 1959(?) onwards | 1 hour | ? |
-| MERRA-21C |  not decided | - | ~50km  | - | - | - | - |
+| MERRA-21C |  2027/2028 | - | -  | - | - | - | - |
 | ICON-DREAM |  2026 | - | 13km  |  | 1980 onwards | 1 hour | ? |
 
 While the planned ERA6 and MERRA-21C include an update of the whole system, the ICON-DREAM is only a back-extension and no major updates are planned.
@@ -119,10 +119,10 @@ Therefore, the current system currently used in the numerical weather forecast n
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
-| COSMO-REA6 |  no | [DWD](link) |  | 6km |  | 1995-2019 | 1 hour/15 minutes | Not extended, .. |
-| HARMONIE | no | [?](link) |  | 9km |  | 1961-2019 | 1 hour? | ? |
-| CERRA |  ? | [C3S?](link) |  | 5.5km |  | 1984 onwards | 1 hour? | ? |
-| ICON-DREAM |  ? | [DWD?](link) |  | 6.5km | grib2? | 2010 onwards | 1 hour | ? |
+| COSMO-REA6 |  no | [DWD](https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/) | [Licence](https://data.opendatascience.eu/geonetwork/srv/api/records/4d6f6090-c242-454b-9224-1151f7ae2823) | 6km | [grib2 to netcdf](https://opendata.dwd.de/climate_environment/REA/COSMO_REA6/help_COSMO_REA6/Convert_REA6_data.pdf) | 1995-2019 | 1 hour/15 minutes | Not extended, .. |
+| HARMONIE-UERRA | no | [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-single-levels?tab=overview) | [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-single-levels?tab=overview) | 9km | grib2 | 1961-2019 | 6 hours | ? |
+| CERRA |  [Refer to here](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | [Info](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | [Info](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | 5.5km |  | 1984 onwards | 1 hour? | ? |
+| ICON-DREAM |  ? | - | CC-BY4.0 | 6.5km | grib2? | 2010 onwards | 1 hour | ? |
 
 The ICON-DREAM reanalyses is the 2-way nest over Europe of the global reanalyses previously described.
 
@@ -227,6 +227,35 @@ List missing data or significant content-related shortcomings for existing data.
     - Data too complex to use in given time (why?)
     - Licensing
     - ... 
+
+### 5.1. Reanalysis challenges
+The reanalysis production faces two main challenges: the observation processing and the sharing of the final product.
+
+We go now more in detail about both.
+
+#### 5.1.1. Observations for producing the reanalysis
+A major technical challenge for producing reanalysis is finding and/or getting access to observations for the past times that not only have a good quality, but also are readable by modern systems.
+
+The centers producing the reanalysis in fact uses their own conventional observations (i.e. SYNOP, TEMP, SHIP, DRIBU,PILOT,AIREP), and those are locally stored.
+Further issues are related to the format of the data: 
+1. centers might not store them in a WMO-standard format, making data sharing very complex; 
+2. changes in the WMO-formats in the decades, forward compatibility to modern formats is not always ensure and trivial. 
+
+When thinking about multi-decades reanalysis, it is important to remember that the local availability depends also not only on the center's history itsefl, but also on the country history.
+   
+Regarding the satellites observations, centers like EUMETSAT, UCAR, etc, provide reprocessed observational datasets. 
+These products have the benefits of having a modern format, but has in mind different end-users.
+This makes very complicate to use such datasets out of the box, given how different in structure and information stored are with respect to the operational version that is sent for weather forecasting.
+To use datasets such as [EUMETSAT ASCAT](https://dx.doi.org/10.15770/EUM_SEC_CLM_0041), the data assimilation code has to go under major re-write for the IO, quality checks, etc.
+This however, would hinder the reanalysis advances due to the complexity in merging the faster paced R&D ongoing in the numerical weather prediction framework.
+
+#### 5.1.2. Sharing of the reanalysis products
+
+The second challenge faced in the reanalysis, but not only there, is to find a plattform to share the large volume of data.
+For the reanalysis, it is especially important that any user can easily access/download many model variables, as e.g. they can be used as initial/boundary conditions for other AI/classical-downscaling runs.
+
+The latter is a limitation for the planning and/or creation of future regional reanalysis, as they can only be designed with what is easily available.
+
 
 ## 6. Conclusion
 
