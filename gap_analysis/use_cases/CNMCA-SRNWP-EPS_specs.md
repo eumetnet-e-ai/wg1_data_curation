@@ -1,6 +1,6 @@
 ## Use case template
 
-In the context of SRNWP-EPS_2 Project of the EUMETNET consortium, the objective of this wor is to use Machine Learning, particularly a decision tree and XGBoost model with Numerical Weather Prediction (NWP) data to enhance early detection of extreme weather events like thunderstorms and fog. + [url](README.md)
+In the context of SRNWP-EPS_2 Project of the EUMETNET consortium, the objective of this wor is to use Machine Learning, particularly a decision tree and XGBoost model with Numerical Weather Prediction (NWP) data to enhance early detection of extreme weather events like thunderstorms and fog. (ref: https://www.eumetnet.eu/activities/forecasting-programme/current-activities-fc/eps-ii)
 
 ### Contact
 Marco Di Giacomo
