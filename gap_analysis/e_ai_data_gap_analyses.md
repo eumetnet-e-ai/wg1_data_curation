@@ -251,10 +251,10 @@ For the reanalysis, it is especially important that any user can easily access/d
 
 The latter is a limitation for the planning and/or creation of future regional reanalysis, as they can only be designed with what is easily available.
 
-
-### Ipact data
+### Impact data
 
 To be added 
+
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|------------|
