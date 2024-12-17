@@ -142,6 +142,36 @@ The planned regional reanalyses for Europe are summarized below.
 
 The main challenge that regional reanalyses are facing is the high volume of data and the lack of a common sharing platform, as at the moment each producer has to create that as well.
 
+#### Reanalysis challenges
+The reanalysis production faces two main challenges: the observation processing and the sharing of the final product.
+
+We go now more in detail about both.
+
+##### Observations for producing the reanalysis
+
+A major technical challenge for producing reanalysis is finding and/or getting access to observations for the past times that not only have a good quality, but also are readable by modern systems.
+
+The centers producing the reanalysis in fact uses their own conventional observations (i.e. SYNOP, TEMP, SHIP, DRIBU,PILOT,AIREP), and those are locally stored.
+Further issues are related to the format of the data: 
+1. centers might not store them in a WMO-standard format, making data sharing very complex; 
+2. changes in the WMO-formats in the decades, forward compatibility to modern formats is not always ensure and trivial. 
+
+When thinking about multi-decades reanalysis, it is important to remember that the local availability depends also not only on the center's history itsefl, but also on the country history.
+   
+Regarding the satellites observations, centers like EUMETSAT, UCAR, etc, provide reprocessed observational datasets. 
+These products have the benefits of having a modern format, but has in mind different end-users.
+This makes very complicate to use such datasets out of the box, given how different in structure and information stored are with respect to the operational version that is sent for weather forecasting.
+To use datasets such as [EUMETSAT ASCAT](https://dx.doi.org/10.15770/EUM_SEC_CLM_0041), the data assimilation code has to go under major re-write for the IO, quality checks, etc.
+This however, would hinder the reanalysis advances due to the complexity in merging the faster paced R&D ongoing in the numerical weather prediction framework.
+
+##### Sharing of the reanalysis products
+
+The second challenge faced in the reanalysis, but not only there, is to find a plattform to share the large volume of data.
+For the reanalysis, it is especially important that any user can easily access/download many model variables, as e.g. they can be used as initial/boundary conditions for other AI/classical-downscaling runs.
+
+The latter is a limitation for the planning and/or creation of future regional reanalysis, as they can only be designed with what is easily available.
+
+
 ### Weather radar data
 Weather radar data are available at least from following sources:
 
@@ -151,7 +181,6 @@ Weather radar data are available at least from following sources:
 | OPERA-SEVIRI fusion dataset (will be added soon)| - | [EWC data buckets](https://confluence.ecmwf.int/display/EWCLOUDKB/EUMETSAT+-+Data+Access=) | EUMETNET License | 2x2km | NetCDF | 2018-2023 | 5/15 minutes | No ready real-time data flow |
 | OPERA volume data |  Via OPERA data distribution to NMHS | RODEO project plans to add to EWC | EUMETNET License | 2x2km | HDF5 | 2012 onwards | 15 minutes | Complex data model |
 | FMI radar data   |  [FMI open data](https://en.ilmatieteenlaitos.fi/radar-data-on-aws-s3) | [FMI open data](https://en.ilmatieteenlaitos.fi/radar-data-on-aws-s3) | CC4By | 250x250m | GeoTiff / HDF5 | Single radar data from 2007 onwards (HDF5), composites from 2020 onwards (GeoTiff) | 5/15 minutes | Limited coverage |
-
 
 
 ### Weather and marine observations from single locations
@@ -221,35 +250,6 @@ To be added
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|------------|
 | data type | Realtime service | Archive | License | Resolution | Format | Time Range | Challenges |
-
-### Reanalysis challenges
-The reanalysis production faces two main challenges: the observation processing and the sharing of the final product.
-
-We go now more in detail about both.
-
-#### Observations for producing the reanalysis
-
-A major technical challenge for producing reanalysis is finding and/or getting access to observations for the past times that not only have a good quality, but also are readable by modern systems.
-
-The centers producing the reanalysis in fact uses their own conventional observations (i.e. SYNOP, TEMP, SHIP, DRIBU,PILOT,AIREP), and those are locally stored.
-Further issues are related to the format of the data: 
-1. centers might not store them in a WMO-standard format, making data sharing very complex; 
-2. changes in the WMO-formats in the decades, forward compatibility to modern formats is not always ensure and trivial. 
-
-When thinking about multi-decades reanalysis, it is important to remember that the local availability depends also not only on the center's history itsefl, but also on the country history.
-   
-Regarding the satellites observations, centers like EUMETSAT, UCAR, etc, provide reprocessed observational datasets. 
-These products have the benefits of having a modern format, but has in mind different end-users.
-This makes very complicate to use such datasets out of the box, given how different in structure and information stored are with respect to the operational version that is sent for weather forecasting.
-To use datasets such as [EUMETSAT ASCAT](https://dx.doi.org/10.15770/EUM_SEC_CLM_0041), the data assimilation code has to go under major re-write for the IO, quality checks, etc.
-This however, would hinder the reanalysis advances due to the complexity in merging the faster paced R&D ongoing in the numerical weather prediction framework.
-
-#### Sharing of the reanalysis products
-
-The second challenge faced in the reanalysis, but not only there, is to find a plattform to share the large volume of data.
-For the reanalysis, it is especially important that any user can easily access/download many model variables, as e.g. they can be used as initial/boundary conditions for other AI/classical-downscaling runs.
-
-The latter is a limitation for the planning and/or creation of future regional reanalysis, as they can only be designed with what is easily available.
 
 ### Impact data
 
