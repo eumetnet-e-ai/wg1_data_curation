@@ -1,39 +1,47 @@
 # Data Gap Analysis for Weather and Climate-Related AI/ML Applications
 
-## 1. Summary
-- Keep short enough
+In order to contribute to this document, please fork the repository, make your changes, and submit a pull request. You are invited to contact the faciltators for providing feedback, content or requesting further information.
 
-## 2. Introduction
+- **Roope Tervo**  
+  EUMETSAT  
+  roope.tervo@eumetsat.int
 
-1 paragraph of background
+- **Arianna Valmassoi**  
+  DWD  
+  arianna.valmassoi@dwd.de
 
-### 2.1 Purpose and Scope
-(1 paragraph)
-
-- to find most important missing data
-- to find technical and content-related obstacles in using the data
-- possibly to be extended to data inventory in the future (more about future avenues in Chapter xx)
-
-### 2.3 Methodology
-(1 or 2 paragaphs)
-
-- WG composition and meetings 
-- Use case data collection
-- Dataset data collection (other documents, do we do anything else?)
-- Writing of this report
+- **Stephan Siemen**  
+  ECMWF  
+  stephan.siemen@ecmwf.int
 
 
-## 3. Data Requirements of Identified Use Cases
+## Summary
+This Data Gap Analysis for Weather and Climate-Related AI/ML Applications is part of the EUMETNET Artificial Intelligence (E-AI) Working Group 1 ('Data Curation') activities. Its primary goal is to identify key data requirements, gaps, and obstacles hindering the effective use of weather and climate data for AI/ML-based applications. 
+
+Key data gaps include missing datasets such as cloud fraction data from high-resolution LEO satellites for Northern Europe and comprehensive icing observations in gridded formats. Additionally, long training datasets for MTG FCI and LI data as well as European-wide weather radar products like echo tops and hail detection remain unavailable.
+
+Obstacles to data usage include slow download speeds, exotic and inconsistent data formats and time steps, lacking or complex geo-referencing, licensing restrictions, and incomplete temporal/geospatial coverage. The lack of real-time equivalents to Climate Data Records (CDRs) further limits AI/ML training capabilities.
+
+Future avenues of this work include expanding the data inventory, providing usage examples, and curating best practices to make weather and climate data more AI-ready. Contributions and feedback from the community are encouraged to further refine this living document and support advancements in AI/ML applications for weather and climate science.
+
+## Introduction
+
+This analyses is part of EUMETNET Artificial Intelligence (E-AI) working group 1 ('data curation') activities. The goal of this document is to provide an overview of the data requirements and most significant gaps and obstacles in data usage in the context of weather and climate-related AI/ML applications. 
+
+The document is composed by European  hydro-meteorological services and related reserarch organisations. The analyses is based on the use cases and data sources provided for this and other E-AI working groups and edited by the working group faciliators. The document is meant to be a living document and updated regularly.
+
+## Data Requirements of Identified Use Cases
 This chapter handles key requirements for data based on the use case analyses.
 
-### 3.1 Key Use Cases
-- List of use cases identified / analysed in this work 
-- Applications summary (table below), possibly to be divided per category in the future:
+### Key Use Cases
+
+This chapter summaries [use cases](./use_cases/) provided by the WG members along with known use cases from other sources. The goal is to provide an overview of the characteristics of the use cases to identify commonalities and key challenges in data usage.
+
+<!-- Applications summary (table below), possibly to be divided per category in the future:
   - Meteorological data (e.g., temperature, humidity, pressure).
   - Climate data (e.g., long-term trends, sea-level changes).
   - Environmental data (e.g., land cover, aerosols).
-  - Socioeconomic data (for impact and adaptation modeling).
-
+  - Socioeconomic data (for impact and adaptation modeling). -->
 
   | Name | Link | Temporal Resolution | Domain | Geospatial Resolution | Used Data | Data Format | Platform | Key Challenges |
   |------|------|---------------------|-------------|----------|------------|-------------|----------|----------------|
@@ -48,33 +56,21 @@ This chapter handles key requirements for data based on the use case analyses.
   | Deep Learning Strategies for IASI based retrievals | EWC R&D project | - | Global | - | IASI, SEVIRI, AVHRR CF | - | EWC | - | 
   | Machine Learning applications for Post-Processing of NWP model output | - | - | Italy |  28x28km | NWP, ERA5 |  - | EWC | - | 
   | ML-based cloud retrieval | EWC R&D project | - | - |  - | DISAMAR simulations, GOME-2, S4, S5, 3MI |  - | EWC | All necessary data not available yet | 
+  | Early fog and thunderstorm detection | [Description](use_cases/CNMCA-SRNWP-EPS_specs.md) | 1 hour | - | 3x3km | COSMO, NWC SAF RDT, METAR |  CSV, NetCDF, GRIB | - | Inconsistent time steps, missing fog prediction data |
 
-
-### 3.3 Joined Characteristics
+### Joined Characteristics
 
 There are no enough use cases to draw trustwrothy synthesis, but preliminary folllowing things can be stated: 
 
 - Preferred access mechanism is S3
 - Preferred data format is controversial
-- Spatial resolution should be as high as possible but it naturally depends on use cases. Currently available data for ML/AI training is sufficient for localised use cases such as nowcasting.
+- Temporal and geospatial resolution varies greatly depending on the use cases
 
-### 3.4 Summary of obstacles
-
-There are no enough use cases to draw trustwrothy synthesis. 
-
-## 4. Current Data Inventory
+## Current Data Inventory
 
 This chapter list most typically used data sources for E-AI applications with necessary details to identify potential challenges with existing data or missing data. Readers are invited to add their data source to the tables.
 
-Also MLCast and MLLAM working group documents list typically used datasets. 
-
-Repeat following for:
-- Reanalysis 
-- NWP data
-- Satellite data
-- Impact data
-
-NOTE: add also key future datasets such as ERA6 and EPS-SG
+Also [MLCast](https://docs.google.com/document/d/1iknFj36XdV19udaIsYJhVJLv2Hq-ARjO85jD0jfrYqw/edit?usp=sharing) and [ML LAM](https://docs.google.com/document/d/1KzMHjl08ESMSpEwJ1eopbWfBp_2MXL-XL63KljWQCZU/edit?usp=sharing) working group documents list typically used datasets. 
 
 ### 4.1 Reanalyses
 
@@ -93,7 +89,7 @@ Weather radar data are available at least from following sources:
 
 
 
-### 4.1 Weather and marine observations from single locations
+### Weather and marine observations from single locations
 
 Weather and marine bservations from single locations include synop stations, automatic weather stations (AWS), soundings, AMDARs, buouys, other type of observations providing data from single location or trajectory.
 
@@ -108,10 +104,18 @@ Weather and marine bservations from single locations include synop stations, aut
 | METAR     | [Aviation weather center API](https://aviationweather.gov/data/api/) | - | - | - | - | - | - |
 | AIRMET       | [Aviation weather center API](https://aviationweather.gov/data/api/) | - | - | - | - | - | - |
 | SIGMET       | [Aviation weather center API](https://aviationweather.gov/data/api/) | - | - | - | - | - | - |
+
+
+### Gridded observations
+
+Gridded observations, a.k.a. analyses are typically produced using more or less complex interpolation methods such as kriging or mesan. 
+
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|------------|
 | Gridded observations fro Finland | [FMI open data](https://en.ilmatieteenlaitos.fi/gridded-observations-on-aws-s3) | [FMI open data](https://en.ilmatieteenlaitos.fi/gridded-observations-on-aws-s3) | CC4By | 1x1km | NetCDF | 2022 onwards | Limited coverage 
 
 
-### 4.2 Satellite data
+### Satellite data
 
 #### Geostationary (GEO) Satellites
 
@@ -145,36 +149,64 @@ Weather and marine bservations from single locations include synop stations, aut
 | **[Nowcasting (NWC SAF)](https://www.nwcsaf.org/)** <br> (mainly software)| Cloud , precipitation, convection, winds, humidity, instability and conceptual products from GEO and LEO satellites | [EUMETCast](https://www.eumetsat.int/eumetcast) |  GEO reference data at [NWC SAF archive](https://www.nwcsaf.org/web/guest/nec/geo-geostationary-archive) | [EUMETSAT Data Policy](https://www.eumetsat.int/data-policy/eumetsat-data-policy.pdf) | 1km for LEO and 3km for GEO satellites | NetCDF, Bufr | - | 10/15 minutes for GEO, ~2 times a day for LEO | Europe+Africa / Global | - |
 
 
-## 5. Identification of Data Gaps
+### NWP data
 
-List missing data or significant content-related shortcomings for existing data. For each: 
+To be added 
 
-- **Data Description**:
-  - Description of data content (variables / parameters / etc.)
-- **Resolution**:
-  - Lack of resolution for use case xx
-- **Coverage**:
-  - Lack of coverage for use case xx
-- **Obstacles in Usage**:
-  - Whatever comes out from the analyses, some guesses: 
-    - Data services not available or not usabe
-    - Data too complex to use in given time (why?)
-    - Licensing
-    - ... 
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|------------|
+| data type | Realtime service | Archive | License | Resolution | Format | Time Range | Challenges |
 
-## 6. Conclusion
+### Impact data
 
-1-2 paragraphs to summary (or we keep only executive summary in the top?)
+To be added 
 
-## 7. Futureu avenues
+| Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
+|-----------|-----------------|---------|---------|------------|--------|------------|------------|
+| data type | Realtime service | Archive | License | Resolution | Format | Time Range | Challenges |
 
-- This version was done very quickly, continue gathering data for this and update
-- Add:
-    - Usage examples
-    - Tools to handle and convert data to AI-ready form
-    - Future directions: do/donts feedback from the ML applications to the different data providers (best practices)
-    - Quality analyses ?
-    - what else?
+
+## Identification of Data Gaps and Obstacles in Usage
+
+Based on the analyses, following data gaps and obstacles in usage have be identified. 
+
+### Missing data
+
+Following missing data were identified: 
+- Fog prediction data is well-known challenge
+- Cloud fraction data from LEO satellites providing high-enough resolution in Northern Europe are missing 
+- Icing observations preferably in gridded format and for multiple levels for Norhern Europe are missing
+- Long-enough training dataset for MTG FCI and LI-data 
+- Missing weather radar products such as echo tops, VIL, and hail prodcuts covering the whole Europe
+
+Moreover, imapct data such as flood, drought, and windstorm data were not yet analysed but it's clear that they are widely missing or only available as proprietary data.
+
+ ### Obstacles in Usage
+
+Following remarkable obastacles in usage were identified:
+
+- Slow download and need to uncompress data after downloading (i.e. for satellite data)
+- Exotic and varying data formats
+- License restrictions i.e. for some satellite data
+- Varying and inconcistent time steps and resolutions. All data is not geo-referenced
+- Climate Data Records (CDRs) are great source for training but there's no always corresponding real-time data available
+- Limited coverage of data sources / fragmented data sources
+
+## Future avenues
+
+As noted, the current version is done in very limited time and collecting use cases and data sources is still ongoing. More data presumably provides more insight to the data gaps and obstacles in usage.
+
+Moreover, the future avenues for this work may also include extension of the content, including:
+
+- Usage examples (e.g. Jupyter notebooks) 
+- List and analyses of tools to handle and convert data to AI-ready form
+- Best practices ('do/donts') for the different data types and sources, collected both from data providers and consumers
+- Quality analyses of the data sources
+
+**We thank all contributors for their instrumental input and feedback!**
+
+We are looking forward to see more contributions from both data providers and consumers. 
+We are also very happy to see hear your feedback and ideas for the future avenues of this work.
 
 
     
