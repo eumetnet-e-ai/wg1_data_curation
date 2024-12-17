@@ -263,13 +263,16 @@ The latter is a limitation for the planning and/or creation of future regional r
 
 ## 7. Futureu avenues
 
-- This version was done very quickly, continue gathering data for this and update
-- Add:
-    - Usage examples
-    - Tools to handle and convert data to AI-ready form
-    - Future directions: do/donts feedback from the ML applications to the different data providers (best practices)
-    - Quality analyses ?
-    - what else?
+Moreover, the future avenues for this work may also include extension of the content, including:
+  - Usage examples (e.g. Jupyter notebooks) 
+  - Tools to handle and convert data to AI-ready form
+  - Best practices ('do/donts') for the different data types and sources, collected both from data providers and consumers
+  - Quality analyses of the data sources
 
+
+**We thank all contributors for their instrumental input and feedback!**
+
+We are looking forward to see more contributions from both data providers and consumers. 
+We are also very happy to see hear your feedback and ideas for the future avenues of this work.
 
     
