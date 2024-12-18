@@ -45,7 +45,7 @@ This chapter summaries [use cases](./use_cases/) provided by the WG members alon
 
   | Name | Link | Temporal Resolution | Domain | Geospatial Resolution | Used Data | Data Format | Platform | Key Challenges |
   |------|------|---------------------|-------------|----------|------------|-------------|----------|----------------|
-  | CloudCast | [Description](../gap_analysis/use_cases/cloudcast.md) | 15 minutes | Northern Europe | 4x4 km | Effective cloudiness, ie. cloud fraction | Zarr | EWC | Poor quality and missing data  |
+  | CloudCast | [Description](../gap_analysis/use_cases/cloudcast.md) | 15 minutes | Northern Europe | 4x4 km | Effective cloudiness, ie. cloud fraction | Zarr | - | Poor quality and missing data  |
   | Icing forecast | [Description](use_cases/icing.md) | 1h | - |  2.5x2.5km | NWP/MEPS | Grib2  | - | - |
   | Earthformer | [Description](use_cases/multi_source_to_precipitation.md) | 5 min | Austria | 1x1km/2x2km | radar / SEVIRI / lightning / analyses | H5 --> tif | EWC | slow download |
   | Tropical storm detection | [Description](use_cases/tropical_storm_detection.md) | 30 minutes | Global | 5km | Infrared satellite images | GeoTiff | EWC | 1) Handling native format is challenging. 2) License restrictions for usage |
