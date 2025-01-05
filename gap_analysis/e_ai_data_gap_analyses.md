@@ -245,11 +245,12 @@ Gridded observations, a.k.a. analyses are typically produced using more or less 
 
 ### NWP data
 
-Forecast data sets are a valuable data set to tune analysis to current wetaher situation and help improve numerical forecasts. Increasingly open data sets are now avialble:
+Forecast data sets are a valuable data source to tune the moddeling of current weather situations and help improve (AI-based) numerical forecasts. Increasingly open data sets are now avialble:
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|------------|
-| ECMWF - Global medium-range | [Forecasts](https://www.ecmwf.int/en/forecasts/access-forecasts/access-real-time-open-data) | [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (9km ->) | GRIB/NetCDF | up to two weeks |  |
+| ECMWF - IFS global medium-range - physics based model + ensembles | [Forecasts](https://www.ecmwf.int/en/forecasts/access-forecasts/access-real-time-open-data) | [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (9km ->) | GRIB/NetCDF | 15 days |  |
+| ECMWF - AIFS global medium-range - AI based model + enembles | [Forecasts](https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data) - 1hr delay| [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (27km ->) | GRIB/NetCDF | 15 days |  |
 
 ### Impact data
 
