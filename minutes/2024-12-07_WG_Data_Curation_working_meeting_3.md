@@ -17,6 +17,7 @@
 - Ben Fitzpatrick
 - José Lorenzo Lliso Valverde
 - Rónán Darcy
+- Stephan Siemen
 
 ## Agenda
 - Setting up
