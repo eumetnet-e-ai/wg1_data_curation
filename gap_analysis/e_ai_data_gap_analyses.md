@@ -83,7 +83,7 @@ The current available global reanalyses are summarized below.
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|-----------|------------|
-| ERA5 |  5-days delay | [C3S](link) | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 35km () |  | 1959(?) onwards | 1 hour | Low resolution |
+| ERA5 |  5-days delay | [C3S](link) | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 30km (9km ERA-Land) | GRIB/NetCDF | 1940 onwards | 1 hour | Low resolution |
 | JRA-55 |  no (1958 - 2024) | [JRA](https://jra.kishou.go.jp/JRA-55/index_en.html) |  [Licence](https://search.diasjp.net/en/dataset/JRA55) | 55km |  | 1958-01-01 - 2024-02-02  | 3/6 hour | Discontinued |
 | JRA-3Q |  - |  [Licence](https://search.diasjp.net/en/dataset/JRA3Q) | [JRA-3Q](DOI:10.20783/DIAS.645) | 40km  | [Variables and format](https://jra.kishou.go.jp/JRA-3Q/document/JRA-3Q_LL125_format_en.pdf) | 1947-09-01 onwards | ? hour | Low resolution |
 | MERRA-2 | 15th of the next month | [Access](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/WMO_climate_reanalysis/) | [Licence](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/)   | 0.5° × 0.625°  | [Variables and format](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/citing_MERRA-2/) | 1980 onwards | 1/3 hour | Low resolution |
@@ -95,7 +95,7 @@ The planned global reanalyses are summarized below.
 
 | Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|------------|--------|------------|-----------|------------|
-| ERA6 |   Q2 2026 | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 14km () |  | 1959(?) onwards | 1 hour | ? |
+| ERA6 |   Q2 2026 | [Licence](https://apps.ecmwf.int/datasets/licences/copernicus/) | 14km () |  | 1940 onwards | 1 hour | ? |
 | MERRA-21C |  2027/2028 | - | -  | - | - | - | - |
 | ICON-DREAM |  2026 | - | 13km  |  | 1980 onwards | 1 hour | ? |
 
