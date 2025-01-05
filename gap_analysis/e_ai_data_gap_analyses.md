@@ -245,11 +245,11 @@ Gridded observations, a.k.a. analyses are typically produced using more or less 
 
 ### NWP data
 
-To be added 
+Forecast data sets are a valuable data set to tune analysis to current wetaher situation and help improve numerical forecasts. Increasingly open data sets are now avialble:
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|------------|
-| data type | Realtime service | Archive | License | Resolution | Format | Time Range | Challenges |
+| ECMWF - Global medium-range | [Forecasts](https://www.ecmwf.int/en/forecasts/access-forecasts/access-real-time-open-data) | [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (9km ->) | GRIB/NetCDF | up to two weeks |  |
 
 ### Impact data
 
