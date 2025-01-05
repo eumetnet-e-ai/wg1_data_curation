@@ -17,7 +17,7 @@
 - Ben Fitzpatrick
 - José Lorenzo Lliso Valverde
 - Rónán Darcy
-- Stephan Siemen
+- Stephan Siemen (ECMWF)
 
 ## Agenda
 - Setting up
