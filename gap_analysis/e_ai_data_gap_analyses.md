@@ -252,10 +252,11 @@ While reanalysis data sets have enabled a fast evolution in the development of A
 | ECMWF - IFS global medium-range - physics based model + ensembles | [Forecasts](https://www.ecmwf.int/en/forecasts/access-forecasts/access-real-time-open-data) | [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (9km ->) | GRIB/NetCDF | 15 days |  |
 | ECMWF - AIFS global medium-range - AI based model + enembles | [Forecasts](https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data) - 1hr delay| [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (27km ->) | GRIB/NetCDF | 15 days |  |
 |  | | |  |  |  | |  |
+|  | | |  |  |  | |  |
 
 ### Impact & IoT data
 
-The use of AI opens up the possibility to intergrate a wider range of (observational) data on which models can be trained. This includes data on impacts of weather events and data measured by IoT and smart devices. 
+The use of AI opens up the possibility to intergrate a wider range of novel (observational) data on which models can be trained. This includes data on impacts of weather events and data measured by IoT and smart devices.
 
 There have been already a number of projects funded under the European Unions's Horizon 2020 and Europe programmes to collect and use IoT data for improved imapact assesments. While these projects show the great potential of these data sources, they also show the more complex handling of the data, not just because of the variance of formats and vocabularies, but also for legal and ethical considerations. Unfortunately the heterogenous and large variance nature of these data sets makes it hard to summarise them here.
 
