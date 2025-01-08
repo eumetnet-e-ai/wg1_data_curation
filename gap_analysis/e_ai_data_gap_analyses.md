@@ -245,16 +245,23 @@ Gridded observations, a.k.a. analyses are typically produced using more or less 
 
 ### NWP data
 
-Forecast data sets are a valuable data source to tune the moddeling of current weather situations and help improve (AI-based) numerical forecasts. Increasingly open data sets are now avialble:
+While reanalysis data sets have enabled a fast evolution in the development of AI-based forecasting models, latest (physics-based) forecasts at higher resolutions are a valuable data source to tune the modeling of current weather situations and help improve (AI-based) numerical forecasts. Fortunately, an increasingly number of open data sets are now avialble:
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
 |-----------|-----------------|---------|---------|------------|--------|------------|------------|
 | ECMWF - IFS global medium-range - physics based model + ensembles | [Forecasts](https://www.ecmwf.int/en/forecasts/access-forecasts/access-real-time-open-data) | [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (9km ->) | GRIB/NetCDF | 15 days |  |
 | ECMWF - AIFS global medium-range - AI based model + enembles | [Forecasts](https://www.ecmwf.int/en/forecasts/dataset/aifs-machine-learning-data) - 1hr delay| [Archive](https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets) | [CC-4.0-BY and the ECMWF ToU](https://apps.ecmwf.int/datasets/licences/general/) | (27km ->) | GRIB/NetCDF | 15 days |  |
+|  | | |  |  |  | |  |
 
-### Impact data
+### Impact & IoT data
 
-To be added 
+The use of AI opens up the possibility to intergrate a wider range of (observational) data on which models can be trained. This includes data on impacts of weather events and data measured by IoT and smart devices. 
+
+There have been already a number of projects funded under the European Unions's Horizon 2020 and Europe programmes to collect and use IoT data for improved imapact assesments. While these projects show the great potential of these data sources, they also show the more complex handling of the data, not just because of the variance of formats and vocabularies, but also for legal and ethical considerations. Unfortunately the heterogenous and large variance nature of these data sets makes it hard to summarise them here.
+
+Efforts are needed to harmonise the access of IoT data for our community, for example like the [TRIGGER](https://project-trigger.eu) project which uses ECMWF's polytope data access software to create a harmonise interface to a wide variance of IoT data from non-meteorological domains. 
+
+*QUESTION: Would it be better to list projects here, rather than data sets?*
 
 
 | Data Type | Realtime Service | Archive | License | Resolution | Format | Time Range | Challenges |
