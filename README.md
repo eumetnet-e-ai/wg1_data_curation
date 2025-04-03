@@ -24,4 +24,8 @@ if you are interested to
 2. contribute to the future work
 3. Join interest group
 
+![E-AI WG Data Curation presentation slide](presentations/WG_data_curation.png)
 
+WG Data Curation slide: 
+- PDF: [presentations/WG_data_curation.pdf](presentations/WG_data_curation.pdf)
+- Power point: [presentations/WG_data_curation.pptx](presentations/WG_data_curation.pptx)
