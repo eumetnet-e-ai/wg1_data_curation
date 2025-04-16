@@ -27,7 +27,7 @@ Please note that also non-publicly available datasets are in scope as well.
 | **Preferred data access mechanism** | |
 | **Data preprocessing** | Python: Radiance to Reflectance, regridding to regular grid in order to export as GeoTiff |
 | **Reason for usage** | We wanted to test the performance of the Prithvi-EO Foundation Model, which was trained on higher resolution Sentinel-2 data with lower resolution Sentintel-3 data.  |
-| **Challenges** | It is possible to download Sen-3 as GeoTiff from eumdac, but then all the required data for the radiance to reflectance data is lost. Also: I created the target data (clear-sky-ocean mask) myself from the .SEN3 file, which I also had to transform into GeoTiff. So as I don't know the transformation that is done inside eumdac, I needed to transform both the input and the target myself in order to do it consistently. |
+| **Challenges** | It is possible to download Sen-3 as GeoTiff from eumdac (+ data tailor), but then all the required data for the radiance to reflectance data is lost. Also: I created the target data (clear-sky-ocean mask) myself from the .SEN3 file, which I also had to transform into GeoTiff. So as I don't know the transformation that is done inside eumdac, I needed to transform both the input and the target myself in order to do it consistently. |
 
 ### Missing data
 
