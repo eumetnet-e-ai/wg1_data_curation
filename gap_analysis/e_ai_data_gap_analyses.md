@@ -107,7 +107,7 @@ Furthermore, the ERA5 ensemble is only meant to sample the observations uncertai
 
 ICON-DREAM provides a 20-ensemble members (ERA5/ERA6 10), which includes physical perturbations and parameter perturbations. However, the challenge lies in sharing this data volume.
 
-#### European Regional Reanalyses
+#### European and other Regional Reanalyses
 
 One of the main limitations for the regional reanalyses production is that they rely on the global reanalyses to provide the boundary conditions.
 Therefore, the current system currently used in the numerical weather forecast needs to be adapted for a reduced/lack of ensemble.
@@ -119,6 +119,7 @@ Therefore, the current system currently used in the numerical weather forecast n
 | HARMONIE-UERRA | no | [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-single-levels?tab=overview) | [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-uerra-europe-single-levels?tab=overview) | 9km | grib2 | 1961-2019 | 6 hours | ? |
 | CERRA |  [Refer to here](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | [Info](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | [Info](https://climate.copernicus.eu/copernicus-regional-reanalysis-europe-cerra) | 5.5km |  | 1984 onwards | 1 hour? | ? |
 | ICON-DREAM |  ? | - | CC-BY4.0 | 6.5km | grib2? | 2010 onwards | 1 hour | ? |
+| CaSR 3.1|  no for now | [Info](https://hpfx.collab.science.gc.ca/~scar700/rcas-casr/index.html) |[Licence](https://open.canada.ca/en/open-government-licence-canada) | 10km | NetCDF | 1980 - 2023 | 1 hour | global available but not distributed |
 
 The ICON-DREAM reanalyses is the 2-way nest over Europe of the global reanalyses previously described.
 
@@ -132,13 +133,14 @@ Therefore, the Japan Meteorological Agency has suggested a framework for regiona
 The sparse/full- input they refer to the observations, the first is with a very limited subset of available observation types for which there is a long record.
 The full-input refers to using as many observations as the current operational system, but limiting the period to one that includes all observation types.
 
-The planned regional reanalyses for Europe are summarized below.
+The planned regional reanalyses for Europe and other regions are summarized below.
 
 | Data Type |  Planned production start | License | Resolution | Format | Time Range | Time Step | Challenges |
 |-----------|-----------------|---------|------------|--------|------------|-----------|------------|
 | ARRA |   Q4 2024 |  | 1.3km  |  | 1961-2020  | 1 hour? | Data sharing: ~13 PB |
 | ICON-FORCE |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
 | ICON-FORCE-C |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
+| CaSR 4  |  2028 | - | ?  |  | 1980 onwards | 1 hour/sub-hourly | ? |
 
 The main challenge that regional reanalyses are facing is the high volume of data and the lack of a common sharing platform, as at the moment each producer has to create that as well.
 
