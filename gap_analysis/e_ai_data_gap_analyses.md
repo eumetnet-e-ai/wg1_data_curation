@@ -140,7 +140,7 @@ The planned regional reanalyses for Europe and other regions are summarized belo
 | ARRA |   Q4 2024 |  | 1.3km  |  | 1961-2020  | 1 hour? | Data sharing: ~13 PB |
 | ICON-FORCE |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
 | ICON-FORCE-C |  2026 | - | 2.1km  |  | 2016 onwards | 1 hour/sub-hourly | ? |
-| CaSR 4  |  2027 | - | ?  |  | 1980 onwards | 1 hour/sub-hourly | ? |
+| CaSR 4  |  2028 | - | ?  |  | 1980 onwards | 1 hour/sub-hourly | ? |
 
 The main challenge that regional reanalyses are facing is the high volume of data and the lack of a common sharing platform, as at the moment each producer has to create that as well.
 
