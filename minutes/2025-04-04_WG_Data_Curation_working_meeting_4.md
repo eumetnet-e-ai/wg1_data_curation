@@ -15,6 +15,7 @@
 - Sina Montazeri (EUMETSAT)
 - Ben Fitzpatrick (UKMO)
 - Anna-Lena Erdmann (EUMETSAT)
+- Milena Dimitrijevic (ECCC)
 
 ## Agenda:
 - Action review
@@ -42,7 +43,7 @@
 - Roope Tervo to move regular meeting invitation to Thursday
 - Leif and Marek to coordinate on July workshop tutorial content
 - Roope Tervo to invite Yordan Radev (ECCC) to Zarr meeting
-- Milena Dimitrijevic to add regional reanalysis data to the gap analysis
+- Milena Dimitrijevic to add Canadian regional reanalysis data to the gap analysis
 - Leif and Ben to coordinate on joined use case to the gap analysis 
 
 ### Gap Analysis document
