@@ -7,8 +7,11 @@ Ingredients:
 
 Examples:
 - `Cloud top features - overshooting top`
-- `Cloud top features - convective features`
+- `Convection - gravity waves`
+- `Convection - overshooting top`
 - `GIAD TS tracking - tropical storms`
+
+Test projects should be clearly marked with `sandbox` postfix.
 
 ## Description
 
