@@ -101,14 +101,14 @@ The Gap Analysis included collection of data via GitHub, presentations and discu
 
 In each session, the interviewer and interviewee were shadowed by a third party taking notes wherever possible. Respondents rated data challenges by severity: minor for unavoidable inconveniences, significant for challenges solvable with time or resources, and blocker for challenges severe enough to prevent use of the data or to require a change in plan. Several questions were designed to be similar to one another to capture nuance. Respondents also rated preferred data formats and contributed to a ‘wish-list’. 
 
-A live poll conducted at the E-AI Spring Meeting in Zagreb (n=42) independently replicated the core patterns from the interviews, providing confidence that the structured sample reflects a broader community experience. Results are included as supplementary.
+A live poll conducted at the E-AI Spring Meeting in Zagreb in April 2026 (n=42) independently replicated the core patterns from the interviews, providing confidence that the structured sample reflects a broader community experience. Results are included as supplementary.
 
 
 \section{Results and Discussion}
 
 \subsection{Respondent Profile}
 \label{sec:subsection}
-Eighteen domain experts participated, drawn from eleven EUMETNET member states (Belgium, Czechia, Denmark, Finland, France, Germany, Ireland, Portugal, Spain, Switzerland, and the UK) plus two private-sector organisations, IBM and Innoflair. Respondents' expertise spanned nowcasting and forecasting (n=10), climate (n=3), and operational products and services (n=5). Years of hands-on ML experience ranged from under two years to over ten. Fourteen participants used satellite data as a primary or co-primary source. Notably, most medium-term weather forecasting teams were not reached for interview and are hence not well-represented in these results.   
+Eighteen domain experts participated, drawn from eleven EUMETNET member states (Belgium, Czech Republic, Denmark, Finland, France, Germany, Ireland, Portugal, Spain, Switzerland, and the UK) plus two private-sector organisations, IBM and Innoflair. Respondents' expertise spanned nowcasting and forecasting (n=10), climate (n=3), and operational products and services (n=5). Years of hands-on ML experience ranged from under two years to over ten. Fourteen participants used satellite data as a primary or co-primary source. Notably, most medium-term weather forecasting teams were not reached for interview and are hence not well-represented in these results.   
 \label{sec:subsection}
 
 \subsection{Data Challenges slowing ML-driven development}
@@ -152,7 +152,7 @@ Ratings here, as well as with overcoming access-challenges, reflect what has imp
 
 Although data preparation/ reformatting is a persistent, significant friction for every development team, this challenge is unlikely to be entirely avoidable as most applications are different. Nevertheless, if undifferentiated parts of the preparation – e.g. reprojecting, reformatting, and quality control – can be centralised, the community can empower developers from smaller organisations and save significantly especially in terms of expert time also in bigger organisation.
 
-\subparagraph{\texttt{Accessing storing data}}
+\subparagraph{\texttt{Accessing and storing data}}
 :\newline
 Biggest source of blockers, causing teams to change their plans or preventing them to do the research they wanted, was related to transferring and storing large amount of data. Large data volumes often became a practical barrier before model development can even begin. Slow downloads made some data acquisitions impractical, and in one example, the estimated download time for the required IFS dataset was longer than the duration of the project. Moving data between local computers, institutional storage, HPC and GPU environments was likewise described as slow. Storage added a further constraint: limited capacity forced teams to retain only samples, while also large numbers of Zarr objects caused challenges. Together, these findings indicate a need for reliable high-volume online storage architectures suited to ML data structures, and analysis-ready datasets hosted close to the computing resources on which they will be used.
 
